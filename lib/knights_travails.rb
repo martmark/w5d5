@@ -31,7 +31,6 @@ class KnightPathFinder
     end
 
     def new_move_positions(pos)
-        # self.valid_moves(pos) if !@considered_positions.include?(pos)
         valids = KnightPathFinder.valid_moves(pos)
         unconsidered = valids.reject { |move| self.considered_positions.include?(move) }
         @considered_positions += unconsidered
