@@ -1,7 +1,8 @@
 require_relative "00_tree_node.rb"
 
 class KnightPathFinder
-    attr_reader :considered_positions, :pos
+    attr_reader :considered_positions, :pos, :children
+    attr_writer :root_node
 
     def self.valid_moves(pos)
         valids = []
@@ -51,6 +52,5 @@ class KnightPathFinder
             end
         end
     end 
-    
-  
+     
 end
